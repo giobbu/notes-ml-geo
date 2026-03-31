@@ -1,7 +1,8 @@
 datasets*
 geo_point*
 geofences*
-gps*
+gps-analytics/gps
+
 .DS_Store
 
 # Byte-compiled / optimized / DLL files
