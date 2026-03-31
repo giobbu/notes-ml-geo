@@ -1,4 +1,4 @@
-# notes-ml-rs
+# notes-ml-geo
 
 ## Image-wise classification
 * Starter notebook for image-wise classification tasks
