@@ -10,6 +10,10 @@ _SUCCESS*
 ._SUCCESS*
 *.parquet
 
+# feast
+*.db
+notebooks/gps-analytics/feature_repo/.gitignore
+
 .DS_Store
 
 # Byte-compiled / optimized / DLL files
