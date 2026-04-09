@@ -3,7 +3,9 @@ geo_point*
 geofences*
 gps-analytics/gps
 
-model_registry*
+notebooks/image-classification/model_registry/v*/*.json
+notebooks/image-classification/model_registry/v*/*.pkl
+notebooks/image-classification/feature_store/v*/*.csv
 
 # pyspark
 .part*
