@@ -2,12 +2,15 @@
 
 ## Image-wise Classification
 
-* Starter notebook for image-wise classification tasks
-* Feature engineering techniques to improve baseline models
-* End-to-end pipeline using Kubeflow for scalable workflows
+* [Starter notebook for image-wise classification tasks](https://github.com/giobbu/notes-ml-geo/blob/main/notebooks/image-classification/0_sentinel2_quick_ml_starter.ipynb)
+* [Feature engineering techniques to improve baseline models](https://github.com/giobbu/notes-ml-geo/blob/main/notebooks/image-classification/1a_sentinel2_feature_engineering.ipynb)
+* [Different flavours of ML global interpretability](https://github.com/giobbu/notes-ml-geo/blob/main/notebooks/image-classification/1b_model_interpretability.ipynb)
+* [End-to-end pipeline using Kubeflow for scalable workflows (inprogess)](https://github.com/giobbu/notes-ml-geo/blob/main/notebooks/image-classification/2_kfp_sentil_pipeline.ipynb)
 
 ## GPS Analytics
-* Starter notebook for generating GPS data sample and Polygons
+* [Starter notebook for GPS processing with Polygons broadcasting](https://github.com/giobbu/notes-ml-geo/blob/main/notebooks/gps-analytics/gps_sample_analytics.ipynb)
+* [Streamline timeseries forecasting with Feast](https://github.com/giobbu/notes-ml-geo/blob/main/notebooks/gps-analytics/spark_feast_forecast_ml.ipynb)
+
 
 ## Setup Docker with Spark and Jupyter Notebook
 You can find a detailed step-by-step guide in:
