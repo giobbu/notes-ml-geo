@@ -63,6 +63,21 @@ echo "8. Create Model Registry DB"
 kubectl apply -k "https://github.com/alexcreasy/model-registry/manifests/kustomize/overlays/db?ref=kind"
 
 echo "-------------------------------"
+echo "Check Model Registry service exists"
+
+while true; do
+  echo "Checking for Model Registry service..."
+  if kubectl get svc -n kubeflow | grep -q model-registry; then
+    echo "Service matching model-registry found"
+    kubectl get svc -n kubeflow | grep model-registry
+    break
+  else
+    echo "Service not found yet..."
+  fi
+  sleep 5
+done
+
+echo "-------------------------------"
 echo "Make directory for port forwarding logs"
 mkdir -p port_forwarding_logs
 
@@ -85,3 +100,7 @@ echo "-------------------------------"
 echo "Kubeflow Pipeline deployed successfully!"
 echo "Open http://localhost:8080 in your browser to access the Kubeflow Pipeline UI."
 open http://localhost:8080
+
+echo "-------------------------------"
+echo "Testing Model Registry API..."
+curl http://localhost:3000/api/model_registry/v1alpha3/registered_models
