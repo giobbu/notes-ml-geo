@@ -57,17 +57,31 @@ echo "7. Create PVC"
 kubectl apply -f pvc.yaml
 kubectl get pvc -n kubeflow
 
+# https://github.com/acornett21/kubeflow-model-registry/blob/main/clients/ui/docs/local-deployment-guide.md
+echo "-------------------------------"
+echo "8. Create Model Registry DB"
+kubectl apply -k "https://github.com/alexcreasy/model-registry/manifests/kustomize/overlays/db?ref=kind"
+
+echo "-------------------------------"
+echo "Make directory for port forwarding logs"
+mkdir -p port_forwarding_logs
+
 echo "-------------------------------"
 echo "Port forwarding Kubeflow Pipeline UI to localhost:8080..."
 chmod +x port_ui.sh
-nohup ./port_ui.sh > port_ui.log 2>&1 &
+nohup ./port_ui.sh > port_forwarding_logs/port_ui.log 2>&1 &
 
 echo "-------------------------------"
 echo "Port forwarding Kubeflow Pipeline Backend to localhost:8888..."
 chmod +x port_backend.sh
-nohup ./port_backend.sh > port_backend.log 2>&1 &
+nohup ./port_backend.sh > port_forwarding_logs/port_backend.log 2>&1 &
 
+echo "-------------------------------"
+echo "Port forwarding Model Registry to localhost:4000..."
+chmod +x port_registry.sh
+nohup ./port_registry.sh > port_forwarding_logs/port_registry.log 2>&1 &
 
 echo "-------------------------------"
 echo "Kubeflow Pipeline deployed successfully!"
-echo "Access the UI at http://localhost:8080"
+echo "Open http://localhost:8080 in your browser to access the Kubeflow Pipeline UI."
+open http://localhost:8080
