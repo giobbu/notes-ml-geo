@@ -4,7 +4,8 @@
 
 * [Starter notebook for image-wise classification tasks](https://github.com/giobbu/notes-ml-geo/blob/main/notebooks/image-classification/0_sentinel2_quick_ml_starter.ipynb)
 * [Feature engineering techniques to improve baseline models](https://github.com/giobbu/notes-ml-geo/blob/main/notebooks/image-classification/1a_sentinel2_feature_engineering.ipynb)
-* [Different flavours of ML global interpretability](https://github.com/giobbu/notes-ml-geo/blob/main/notebooks/image-classification/1b_model_interpretability.ipynb)
+* [Different flavours of global interpretability](https://github.com/giobbu/notes-ml-geo/blob/main/notebooks/image-classification/1b_global_interpretability.ipynb)
+* [In-Depth Model Analysis and Debugging  (inprogess)](https://github.com/giobbu/notes-ml-geo/blob/main/notebooks/image-classification/1c_full_debuggability.ipynb)
 * [End-to-end pipeline using Kubeflow for scalable workflows (inprogess)](https://github.com/giobbu/notes-ml-geo/blob/main/notebooks/image-classification/2_kfp_sentil_pipeline.ipynb)
 
 ## GPS Analytics
